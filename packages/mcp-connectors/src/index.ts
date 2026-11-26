@@ -1,0 +1,17 @@
+export { arxivBiorxiv, builtInConnectors, chembl, clinvar, ensembl, geo, pubmed, rcsbPdb, uniprot } from './connectors.js';
+export { alphafoldDb } from './alphafoldDb.js';
+export { cbioportal } from './cbioportal.js';
+export { clinicaltrials } from './clinicalTrials.js';
+export { elnBenchling } from './elnBenchling.js';
+export { openalex } from './openAlex.js';
+export { openTargets } from './openTargets.js';
+export { kegg, reactome } from './pathwayConnectors.js';
+export { pubchem } from './pubchem.js';
+export { stringDb } from './stringDb.js';
+export { zotero } from './zotero.js';
+export type { ConnectorResponse, ScientificConnector } from './connectors.js';
+export { callExternalMcpTool, discoverExternalMcpTools } from './mcp-client.js';
+export { ConnectorRegistry, type ConnectorRegistryOptions } from './registry.js';
+export type { ConnectorContext } from './connectorSupport.js';
+export { SpillManager } from './spill.js';
+export type { SpillOptions } from './spill.js';

@@ -1,0 +1,28 @@
+{
+  "name": "@scideveloper/server",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "dependencies": {
+    "@scideveloper/shared": "0.1.0",
+    "@scideveloper/provenance": "0.1.0",
+    "@scideveloper/skills": "0.1.0",
+    "@scideveloper/mcp-connectors": "0.1.0",
+    "@scideveloper/compute": "0.1.0",
+    "@scideveloper/agents": "0.1.0",
+    "express": "^5.1.0",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/cors": "^2.8.17"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "test": "vitest run"
+  }
+}

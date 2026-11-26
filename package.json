@@ -1,0 +1,31 @@
+{
+  "name": "scideveloper",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "SciDeveloper — Local-first AI Scientific Research Workbench inspired by Claude Science",
+  "license": "GPL-3.0-only",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @scideveloper/shared && npm run build -w @scideveloper/provenance && npm run build -w @scideveloper/skills && npm run build -w @scideveloper/mcp-connectors && npm run build -w @scideveloper/compute && npm run build -w @scideveloper/agents && npm run build -w @scideveloper/server && npm run build -w @scideveloper/desktop && npm run build -w @scideveloper/web",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "dev:server": "npm run dev --workspace=@scideveloper/server",
+    "dev:web": "npm run dev --workspace=@scideveloper/web",
+    "start": "npm run start --workspace=@scideveloper/server",
+    "desktop": "npm run dev --workspace=@scideveloper/desktop",
+    "package:win": "npm run build && node scripts/package-win.mjs"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "vitest": "^3.1.1"
+  }
+}
